@@ -10,8 +10,7 @@ class SubscriptionsSeeder extends Seeder
      * @return void
      */
     public function run()
-			{
-			  factory(App\Subscription::class, 25)->create();
-
-			}
+	{
+	  factory(App\Subscription::class, 25)->create();
+	}
 }

@@ -1,9 +1,7 @@
 @extends('adminems::panel')
 
 @section('content')
-
 	
-		
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h2 class="panel-title"> Subscripciones </h2>
@@ -33,8 +31,4 @@
 
 	</div>
 
-@stop
-
-@section('scripts')
-	@include('success')
 @stop

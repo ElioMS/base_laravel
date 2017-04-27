@@ -25,7 +25,6 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Subscription::class, function (Faker\Generator $faker) {
     return [
-
         'email' => str_random(3).'@asd.com',
     ];
 });
