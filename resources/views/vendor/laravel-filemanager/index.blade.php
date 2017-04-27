@@ -123,7 +123,7 @@
         <div class="modal-body">
           <form class="dropzone" action="{{ route('dropzone') }}" role='form' id='my-dropzone' method="post" name='uploadForm' enctype='multipart/form-data'>
             <div class="form-group" id="attachment">
-              <label for='upload' class='control-label'>{{ trans('laravel-filemanager::lfm.message-choose') }}</label>
+              {{-- <label for='upload' class='control-label'>{{ trans('laravel-filemanager::lfm.message-choose') }}</label> --}}
               <div class="controls">
                 <div class="input-group" style="width: 100%">
                   {{-- <input type="file" id="upload" name="upload[]" multiple="multiple"> --}}

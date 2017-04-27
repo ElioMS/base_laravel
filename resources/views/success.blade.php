@@ -8,7 +8,7 @@
 	            hideMethod: 'fadeOut',
 	            timeOut: 5000
 	        };
-	        toastr.success({{ $message }}, 'Success!');
+	        toastr.success("{{ $message }}", 'Success!');
 	    }, 0);
 	</script>
 @endif

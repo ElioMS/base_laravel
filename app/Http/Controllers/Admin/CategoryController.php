@@ -39,6 +39,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(), [
+            'nombre' => 'required',
+            'image' => 'required'
+        ]);
+
+        // dd(request('image'));
+
         Category::create([
             'nombre' => request('nombre'),
             'imagen' => request('image')
@@ -67,7 +74,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('admin.category.edit' , compact('category'));
     }
 
     /**
@@ -79,7 +87,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->nombre = request('nombre');
+        $category->imagen = request('image');
+        $category->save();
+
+        session()->flash('success' , 'Categoria actualizada con exito');
+        return redirect()->route('categories.index');
     }
 
     /**

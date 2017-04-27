@@ -11,7 +11,7 @@
 			</div>
 
 			<div class="panel-body">
-				<table id="table" class="display table dataTable">
+				<table id="table" class="display table table-hover dataTable">
 					<thead>
 						<th> Name </th>
 						<th> Created at </th>
@@ -21,7 +21,7 @@
 					<tbody>
 						@foreach ($categories as $element)
 							<tr>
-								<td> {{ $element->nombre }} </td>
+								<td> <a href="{{ route('categories.edit' , ['id' => $element->id]) }}"> {{ $element->nombre }} </a> </td>
 								<td> {{ $element->created_at }} </td>
 								<td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td>
 							</tr>
