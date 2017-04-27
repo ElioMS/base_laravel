@@ -41,14 +41,14 @@ class CategoryController extends Controller
     {
         $this->validate(request(), [
             'nombre' => 'required',
-            'image' => 'required'
+            'imagen' => 'required'
         ]);
 
         // dd(request('image'));
 
         Category::create([
             'nombre' => request('nombre'),
-            'imagen' => request('image')
+            'imagen' => request('imagen')
         ]);
 
         session()->flash('success' , 'Categoria creada con exito');
@@ -87,6 +87,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate(request(), [
+            'nombre' => 'required',
+            'image' => 'required'
+        ]);
+
         $category = Category::find($id);
         $category->nombre = request('nombre');
         $category->imagen = request('image');

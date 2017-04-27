@@ -31,7 +31,7 @@ class MacroServiceProvider extends ServiceProvider
             $item .= '<p class="title-image-flm"> '. $nombre_imagen.' </p>';
             $item .= '<div class="ui fluid btn-group">';
             $item .= '<div data-input="'.$name.'" class="btn btn-info fm-button btn-addon m-b-sm btn-sm">  <i class="fa fa-search"></i> Ver Galeria </div>';
-            $item .= \Form::text($name , null , ['id' => $name , 'class' => 'input-flm', 'placeholder' => '', 'hidden' => true]);
+            $item .= \Form::text($name , $path ? $path : null , ['id' => $name , 'class' => 'input-flm', 'placeholder' => '', 'hidden' => true]);
              if ($path) {
                 $item .= '<a class="btn btn-default preview-flm" data-name="'.$path.'"> <i class="fa fa-eye"> </i></a>';
             }

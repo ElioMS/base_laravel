@@ -13,7 +13,7 @@ class CreateAdminsTable extends Migration
      */
     public function up()
     {
-        //
+        
     }
 
     /**

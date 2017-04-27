@@ -6,12 +6,13 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "emgs/admin-emgs-laravel": "dev-master",
+        "emgs/admin-emgs-laravel": "1.0",
         "intervention/image": "^2.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.3.0",
-        "unisharp/laravel-filemanager": "^1.7.5"
+        "unisharp/laravel-filemanager": "^1.7.5",
+        "maatwebsite/excel": "~2.1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
