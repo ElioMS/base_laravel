@@ -1,0 +1,10 @@
+{
+    "name": "ems/admin-laravel",
+    "authors": [
+        {
+            "name": "eliogsolis",
+            "email": "elio.gsolis@gmail.com"
+        }
+    ],
+    "require": {}
+}
