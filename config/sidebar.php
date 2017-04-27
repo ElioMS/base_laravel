@@ -9,6 +9,15 @@ return[
         'ico'  => 'edit'
       ],
 
+      [
+        'type' => 'simple',
+        'text' => 'Subscriptions',
+        'url'  => 'subscriptions.index',
+        'ico'  => 'edit'
+      ],
+
+
+
         // [
         //     'type' => 'simple',
         //     'text' => 'Galleries',

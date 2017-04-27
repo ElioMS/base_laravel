@@ -2,12 +2,11 @@
 
 @section('content')
 
-	<a href="{{ route('categories.create') }}" type="a" class="btn btn-success pull-right btn-addon m-b-sm btn-rounded btn-md"><i class="fa fa-plus"></i> Add </a>
-	<div class="col-md-12">
+	
 		
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h2 class="panel-title"> Categories </h2>
+				<h2 class="panel-title"> Subscripciones </h2>
 			</div>
 
 			<div class="panel-body">
@@ -15,15 +14,15 @@
 					<thead>
 						<th> Name </th>
 						<th> Created at </th>
-						<th> Image </th>
+						
 					</thead>
 
 					<tbody>
-						@foreach ($categories as $element)
+						@foreach ($subscriptions as $element)
 							<tr>
-								<td> <a href="{{ route('categories.edit' , ['slug' => $element->slug]) }}"> {{ $element->nombre }} </a> </td>
+								<td> {{ $element->email }} </td>
 								<td> {{ $element->created_at }} </td>
-								<td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td>
+								
 							</tr>
 						@endforeach
 						

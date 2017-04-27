@@ -47,6 +47,7 @@ class CategoryController extends Controller
         // dd(request('image'));
 
         Category::create([
+            "slug" => str_slug(request("nombre"),"-"),
             'nombre' => request('nombre'),
             'imagen' => request('image')
         ]);
@@ -72,9 +73,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $category = Category::find($id);
+        $category = Category::where('slug', $slug);
         return view('admin.category.edit' , compact('category'));
     }
 
