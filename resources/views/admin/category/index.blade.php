@@ -21,7 +21,7 @@
 					<tbody>
 						@foreach ($categories as $element)
 							<tr>
-								<td> <a href="{{ route('categories.edit' , ['id' => $element->id]) }}"> {{ $element->nombre }} </a> </td>
+								<td> <a href="{{ route('categories.edit' , ['slug' => $element->slug]) }}"> {{ $element->nombre }} </a> </td>
 								<td> {{ $element->created_at }} </td>
 								<td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td>
 							</tr>
