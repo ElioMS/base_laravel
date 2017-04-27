@@ -37,5 +37,5 @@
 @stop
 
 @section('scripts')
-	@include('success')
+	@include('adminems::success')
 @stop

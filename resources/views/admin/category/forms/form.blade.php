@@ -11,9 +11,9 @@
 
 		<div class="form-group {{ $errors->has('imagen') ? 'has-error' : '' }}">
 			@if (isset($category))
-				{!! Form::stdImg('Imagen *' , 'image' , $category->imagen) !!}
+				{!! Form::stdImg('Imagen *' , 'imagen' , $category->imagen) !!}
 				@else
-				{!! Form::stdImg('Imagen *' , 'image') !!}
+				{!! Form::stdImg('Imagen *' , 'imagen') !!}
 			@endif
 			
 			{!! $errors->first('imagen', '<span class="help-block"><strong> :message </strong></span>') !!}
