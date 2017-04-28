@@ -20,10 +20,11 @@
 
 					<tbody>
 						@foreach ($categories as $element)
-							<tr>
+							<tr data-id="{{ $element->id }}">
+							<td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td>
 								<td> <a href="{{ route('categories.edit' , ['slug' => $element->slug]) }}"> {{ $element->nombre }} </a> </td>
 								<td> {{ $element->created_at }} </td>
-								<td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td>
+								
 							</tr>
 						@endforeach
 						

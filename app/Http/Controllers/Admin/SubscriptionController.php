@@ -20,6 +20,22 @@ class SubscriptionController extends Controller
         return view('admin.subscription.index', compact('subscriptions'));
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request , $id)
+    {
+
+        if ($request->ajax()) {
+            $category = Subscription::find($id);
+            $category->delete();
+            return response()->json($category->id);
+         }
+    }
+
      public function export() {
         \Excel::create('Contact form', function($excel){
              $excel->sheet('Subcategorías' , function($sheet){
@@ -31,10 +47,9 @@ class SubscriptionController extends Controller
                     $array = array($email);
                     array_push($excel , $array);
                 }
-           
-                $sheet->fromArray($excel, null, 'A1', false, false)->prependRow(array('Email'));
-                $sheet->setBorder('A1:C4', 'thin');
-                $sheet->cells('A1:D1', function($cells) {
+
+                $sheet->fromArray($excel, null, 'A1', false, false)->prependRow(array('Email'));    
+                $sheet->cells('A1', function($cells) {
         
                     $cells->setAlignment('center');
                     $cells->setBackground('#85C3FE');
