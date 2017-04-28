@@ -19,6 +19,14 @@ Route::get('/file', function () {
     return view('file');
 });
 
+Route::get('/indice', "Web\IndexController")->name("indice");
+
+Route::get('/contacto', "Web\ContactoController")->name("contacto");
+
+Route::post('/contacto/form', "Web\FormController@store")->name("form");
+
+
+
 Auth::routes();
 
 

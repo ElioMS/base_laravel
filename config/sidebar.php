@@ -16,6 +16,14 @@ return[
         'ico'  => 'edit'
       ],
 
+      [
+        'type' => 'simple',
+        'text' => 'Contacts',
+        'url'  => 'contacts.index',
+        'ico'  => 'edit'
+      ],
+
+
 
 
         // [
