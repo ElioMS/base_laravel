@@ -21,6 +21,14 @@
 </head>
 <body>
 
+@php
+    use Ems\AdminEms\controllers\SeoController;
+	use Illuminate\Support\Facades\Route;
+	$currentPath = Route::getFacadeRoot()->current()->uri();
+	$path = '/'.$currentPath.'/';
+	$result = SeoController::checkIfRouteExists($path);
+@endphp
+
 @include('web.navbar')
 
 @yield("content")
