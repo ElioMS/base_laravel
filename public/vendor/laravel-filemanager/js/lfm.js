@@ -31,6 +31,7 @@
 function SetUrl(url, file_path){
   //set the value of the desired input to image url
   var target_input = $('#' + localStorage.getItem('target_input'));
+  // var file_path = '/uploads/shares/'+file_path;
   target_input.val(file_path);
   var extension = file_path.split('.').pop();
   var image_value = file_path.split('/').pop();

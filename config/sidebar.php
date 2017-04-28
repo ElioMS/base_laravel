@@ -32,9 +32,9 @@ return[
                         'url' => 'subcategories.index',
                     ],
                     [
-                    'text' => 'Products',
-                    'url' => 'products.index',
-                    'ico' => 'fa fa-envelope'
+                        'text' => 'Products',
+                        'url' => 'products.index',
+                        'ico' => 'fa fa-envelope'
                     ],
             ]
         ],
