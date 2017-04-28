@@ -22,10 +22,19 @@ class MacroServiceProvider extends ServiceProvider
             return $item;
         });
 
-         \Form::macro('stdSelect', function($label, $name, $values) {
+        \Form::macro('stdInputArea', function($label, $name) {
             $item  = '<label class="col-sm-2 control-label"><strong> '.$label.' </strong></label>';
             $item .= '<div class="col-sm-8">';
-            $item .= \Form::select($name , $values, null , ['class' => 'form-control', 'placeholder' => 'Seleccionar Categoria']);
+            $item .= \Form::textarea($name , null , ['class' => 'form-control', 'placeholder' => '', 'rows' => '6x4']);
+            $item .= '</div>';
+            
+            return $item;
+        });
+
+         \Form::macro('stdSelect', function($label, $name, $values, $placeholder) {
+            $item  = '<label class="col-sm-2 control-label"><strong> '.$label.' </strong></label>';
+            $item .= '<div class="col-sm-8">';
+            $item .= \Form::select($name , $values, null , ['class' => 'form-control', 'placeholder' => $placeholder]);
             $item .= '</div>';
             
             return $item;
