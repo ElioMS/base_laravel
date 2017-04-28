@@ -14,15 +14,15 @@
 					<thead>
 						<th> Name </th>
 						<th> Created at </th>
-						
+						<th></th>
 					</thead>
 
 					<tbody>
 						@foreach ($subscriptions as $element)
-							<tr>
+							<tr class="table-rows" data-id="{{ $element->id }}">
 								<td> {{ $element->email }} </td>
 								<td> {{ $element->created_at }} </td>
-								
+								<td> <button type="button" class="btn btn-danger eliminar-elemento"  data-toggle="modal" data-target="#delete-modal"> <i class="fa fa-trash"></i> </button> </td>
 							</tr>
 						@endforeach
 						
@@ -32,5 +32,50 @@
 		</div>
 
 	</div>
-
+	
+	{{ Form::open(['route' => ['subscriptions.destroy' , ':c_id'] , 'method' => 'DELETE', 'id' => 'form-delete']) }}
+	{{ Form::close() }}
 @stop
+
+@section('scripts')
+	<script>
+		$(document).ready(function(e) {
+    $(".eliminar-elemento").on('click', function(e) {
+        var elemento = $(this).closest('tr').data('id')
+        $("#elemento-id").val(elemento)
+        $(".modal-footer").find('.f-delete').attr('data-id', elemento)
+    });
+
+    $(".f-delete").on('click', function(e) {
+
+        var elementoId = $("#elemento-id").val();
+        var form = $("#form-delete");
+        var url  = form.attr('action').replace(':c_id', elementoId);
+        var data = form.serialize();
+
+        $.ajax({
+            url : url,
+            type: 'post',
+            dataType: 'json',
+            data: data,
+            success: function (response) {
+            	if (response) {
+                    var trs = $('.table-rows');
+
+					$.each(trs, function(index, val) {
+						var value = $(this).data('id')
+						if (value === response) {
+							$("#close-modal-dl").click()
+							$(this).fadeOut('slow/400/fast');
+						}  
+					});
+                }
+            }
+        });
+    });
+});
+	</script>
+@stop
+
+
+

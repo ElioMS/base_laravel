@@ -35,3 +35,11 @@
   max-height: 100px;
   max-width: 291px;
 }
+
+.modal-backdrop {
+  z-index: 0 !important;
+}
+
+.modal-content {
+    top: 100px !important;
+}
