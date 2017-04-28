@@ -23,6 +23,14 @@ return[
         'ico'  => 'edit'
       ],
 
+      [
+        'type' => 'simple',
+        'text' => 'Subcategories',
+        'url'  => 'subcategories.index',
+        'ico'  => 'edit'
+      ],
+
+
 
 
 

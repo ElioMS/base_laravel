@@ -22,6 +22,15 @@ class MacroServiceProvider extends ServiceProvider
             return $item;
         });
 
+         \Form::macro('stdSelect', function($label, $name, $values) {
+            $item  = '<label class="col-sm-2 control-label"><strong> '.$label.' </strong></label>';
+            $item .= '<div class="col-sm-8">';
+            $item .= \Form::select($name , $values, null , ['class' => 'form-control', 'placeholder' => 'Seleccionar Categoria']);
+            $item .= '</div>';
+            
+            return $item;
+        });
+
         \Form::macro('stdImg', function($label , $name, $path = null) {
 
             $path ?  $nombre_imagen = array_last(explode('/', $path)) : $nombre_imagen = '';

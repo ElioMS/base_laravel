@@ -13,6 +13,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'] , function() {
 	///////////////////////////////////
 
 
+	Route::resource('subcategories' , 'SubcategoryController');
+
+
 
 
 
