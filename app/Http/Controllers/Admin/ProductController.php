@@ -104,7 +104,7 @@ class ProductController extends Controller
     {
         $this->validate(request(), [
             'nombre' => 'required',
-            'category_id' => 'required'
+            'subcategory_id' => 'required'
         ]);
 
         $product = Product::find($id);
@@ -115,10 +115,12 @@ class ProductController extends Controller
         $product->imagen = request('imagen');
         $product->status = request('status');
 
-        $category->save();
+
+
+        $product->save();
 
         session()->flash('success' , 'Producto actualizado con exito');
-        return redirect()->route('subcategories.index');
+        return redirect()->route('products.index');
     }
 
     /**

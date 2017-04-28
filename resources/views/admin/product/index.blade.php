@@ -31,7 +31,7 @@
 						@foreach ($products as $element)
 							<tr data-id="{{ $element->id }}">
 							{{-- <td> <img class="image ic-img" src="{{ asset($element->imagen) }}" alt=""> </td> --}}
-								<td> <a href="{{ route('subcategories.edit' , ['slug' => $element->slug]) }}"> {{ $element->nombre }} </a> </td>
+								<td> <a href="{{ route('products.edit' , ['slug' => $element->slug]) }}"> {{ $element->nombre }} </a> </td>
 								<td> {{ $element->description }} </td>
 								<td> {{ $element->price }} </td>
 								<td> {{ $element->subcategory->nombre }} </td>

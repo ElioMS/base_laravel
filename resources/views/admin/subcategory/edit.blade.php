@@ -1,7 +1,7 @@
 @extends('adminems::panel')
 
 @section('content')
-	{!! Form::model($subcategory, ['route' => ['subcategories.update', $subcategory->id], 'method' => 'PUT' , 'id' => 'admin-form']) !!}
+	{!! Form::model($subcategory, ['route' => ['subcategories.update', $subcategory->id], 'method' => 'PUT' , 'id' => 'admin-form'])  !!}
 		@include('admin.subcategory.forms.form')
 	{!! Form::close() !!}
 

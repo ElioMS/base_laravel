@@ -30,6 +30,10 @@ return[
                     'text' => 'Subcategories',
                     'url' => 'subcategories.index',
                 ],
+                [
+                    'text' => 'Products',
+                    'url' => 'products.index',
+                ],
                 // [
                 // 'text' => 'Products',
                 // 'url' => '',
