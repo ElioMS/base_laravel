@@ -21,7 +21,7 @@ Route::get('/file', function () {
 
 Route::get('/indice', "Web\IndexController")->name("indice");
 
-Route::get('/contacto', "Web\ContactoController")->name("contacto");
+Route::get('/contacto/aa/bbb/', "Web\ContactoController")->name("contactos");
 
 Route::post('/contacto/form', "Web\FormController@store")->name("form");
 
