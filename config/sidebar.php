@@ -31,11 +31,11 @@ return[
                         'text' => 'Subcategories',
                         'url' => 'subcategories.index',
                     ],
-                    // [
-                    // 'text' => 'Products',
-                    // 'url' => '',
-                    // 'ico' => 'fa fa-envelope'
-                    // ],
+                    [
+                    'text' => 'Products',
+                    'url' => 'products.index',
+                    'ico' => 'fa fa-envelope'
+                    ],
             ]
         ],
         [
@@ -48,10 +48,10 @@ return[
                   'url' => 'seo.index',
                   'ico' => 'fa fa-groups'
                 ],
-                [
-                    'text' => 'Products',
-                    'url' => 'products.index',
-                ],
+                // [
+                //     'text' => 'Products',
+                //     'url' => 'products.index',
+                // ],
                 // [
                 //   'text' => 'Redirecciones',
                 //   'url' => '',
