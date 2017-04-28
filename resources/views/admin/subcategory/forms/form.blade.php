@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="form-group {{ $errors->has('nombre') ? 'has-error' : '' }}">
-			{!! Form::stdSelect('Categoria *','category_id', $categories) !!}
+			{!! Form::stdSelect('Categoria *','category_id', $categories, 'Seleccionar Categoria') !!}
 			{!! $errors->first('nombre', '<span class="help-block"><strong> :message </strong></span>') !!}
 		</div>
 

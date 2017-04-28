@@ -85,9 +85,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        $subcategories = Subcategory::pluck('nombre','id');
+        $product = Product::where('slug', $slug)->first();
+        
+        return view('admin.product.edit' , compact('product', 'subcategories'));
     }
 
     /**
@@ -99,7 +102,23 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate(request(), [
+            'nombre' => 'required',
+            'category_id' => 'required'
+        ]);
+
+        $product = Product::find($id);
+        $product->nombre = request('nombre');
+        $product->subcategory_id = request('subcategory_id');
+        $product->description = request('description');
+        $product->price = request('price');
+        $product->imagen = request('imagen');
+        $product->status = request('status');
+
+        $category->save();
+
+        session()->flash('success' , 'Producto actualizado con exito');
+        return redirect()->route('subcategories.index');
     }
 
     /**

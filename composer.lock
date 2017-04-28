@@ -112,12 +112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ElioMS/admin-laravel.git",
-                "reference": "c21f1d9f8eb7d726288745242407d819a5184cd4"
+                "reference": "9741a5ccb2c9c989c74185bf35cba5fd6a51ea07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ElioMS/admin-laravel/zipball/c21f1d9f8eb7d726288745242407d819a5184cd4",
-                "reference": "c21f1d9f8eb7d726288745242407d819a5184cd4",
+                "url": "https://api.github.com/repos/ElioMS/admin-laravel/zipball/9741a5ccb2c9c989c74185bf35cba5fd6a51ea07",
+                "reference": "9741a5ccb2c9c989c74185bf35cba5fd6a51ea07",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                 }
             ],
             "description": "My first Composer project",
-            "time": "2017-04-28T20:38:58+00:00"
+            "time": "2017-04-28T21:41:47+00:00"
         },
         {
             "name": "erusev/parsedown",
