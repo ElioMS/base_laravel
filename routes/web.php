@@ -29,7 +29,6 @@ Route::post('/contacto/form', "Web\FormController@store")->name("form");
 
 Auth::routes();
 
-
-
-
 Route::get('/home', 'HomeController@index');
+
+

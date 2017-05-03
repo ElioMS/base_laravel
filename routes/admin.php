@@ -14,8 +14,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin' , 'middleware' => 'aut
 	Route::resource('categories' , 'CategoryController');	
 	Route::resource('subscriptions' , 'SubscriptionController', ['only' => ['index' , 'destroy']]);
 	Route::resource('contacts' , 'ContactController', ['only' => ['index', 'destroy']]);
-	
-
+	Route::resource('roles', 'RoleController');
+	Route::resource('roles', 'UserController');
 
 
 	Route::get('/export-contacts' , 'SubscriptionController@export')->name('admin.export.contacts');
